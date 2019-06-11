@@ -34,7 +34,7 @@ class Scraper
           hash[:blog]= icon
         end
         binding.pry
-          profile_quote = text.css(".profile-quote").text if text.css(".profile-quote") 
+          profile_quote = text.css(".profile-quote").text if text.css(".profile-quote")
         bio = ""
       end
       hash
