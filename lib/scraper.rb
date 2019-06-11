@@ -22,7 +22,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     hash = {} #create the container
     text= Nokogiri::HTML(open(profile_url)) #tell Nokogiri what to comb. We can remove a line by opening where the arg is passed in
-      pages = text.css(".social-icon-container").children.css("a").map {|icon| icon.attribute("href").value} 
+      pages = text.css(".social-icon-container").children.css("a").map {|icon| icon.attribute("href").value}
         #specifically, we look at the children of social-icon-container and collect a specific value of an attrib into an array
         # the ".value" at the end keeps the whole "href" pairing from being returned.
         pages.each do |icon|
