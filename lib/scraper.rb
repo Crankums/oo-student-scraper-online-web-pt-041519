@@ -33,7 +33,7 @@ class Scraper
         else
           hash[:blog]= icon
         end
-        binding.pry
+        #binding.pry
           hash[:profile_quote] = text.css(".profile-quote").text if text.css(".profile-quote")
         hash[:bio] = text.css(".description-holder p").text if text.css(".description-holder p").text
       end
